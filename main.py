@@ -4,8 +4,9 @@ from keyboardse import InLineKey
 
 bot = telebot.TeleBot(config.BOT_TOKEN)
 
-InLineKey.start(bot)
+
 
 if __name__ == "__main__":
+    InLineKey.start(bot)
     bot.infinity_polling()
 
