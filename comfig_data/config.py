@@ -1,3 +1,5 @@
+import telebot
+import config
 import os
 from dotenv import load_dotenv, find_dotenv
 
@@ -12,3 +14,5 @@ DEFAULT_COMMANDS = (
     ("start", "Запустить бота"),
     ("help", "Вывести справку")
 )
+
+bot = telebot.TeleBot(BOT_TOKEN)

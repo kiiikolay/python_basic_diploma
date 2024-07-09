@@ -1,11 +1,10 @@
+from comfig_data.config import bot
 import telebot
 from telebot import types
 from comfig_data import config
 
-bot = telebot.TeleBot(config.BOT_TOKEN)
 
-
-@bot.message_handlers(command=['start'])
+@bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup()
     btn1 = types.KeyboardButton('По названию')

@@ -1,9 +1,7 @@
+from comfig_data.config import bot
 import telebot
 from comfig_data import config
 from keyboardse import InLineKey
-
-bot = telebot.TeleBot(config.BOT_TOKEN)
-
 
 
 if __name__ == "__main__":
