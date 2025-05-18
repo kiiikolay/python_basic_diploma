@@ -3,6 +3,18 @@ import json
 import os
 
 def genre_markup():
+    """
+    Создает ReplyKeyboardMarkup с кнопками жанров из файла 'genre.json'.
+
+    Функция читает данные о жанрах из JSON-файла, расположенного в поддиректории
+    'data_for_marks' относительно текущего местоположения скрипта.
+    На основе этих данных формируются кнопки клавиатуры, которые добавляются
+    в объект ReplyKeyboardMarkup.  Кнопки добавляются построчно, по три кнопки в ряд,
+    до тех пор, пока не закончатся жанры в файле.
+
+    Returns:
+        ReplyKeyboardMarkup: Объект клавиатуры с кнопками жанров.
+    """
     dir_path = os.path.dirname(os.path.realpath(__file__))
     file_path = os.path.join(dir_path, 'data_for_marks', 'genre.json')
 
