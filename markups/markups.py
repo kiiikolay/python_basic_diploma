@@ -1,10 +1,14 @@
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 import json
+import os
 
 def genre_markup():
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(dir_path, 'data_for_marks', 'genre.json')
+
     buttons = []
     markup = ReplyKeyboardMarkup(True, True)
-    with open('../genre.json', 'r', encoding='utf8') as gen:
+    with open(file_path, 'r', encoding='utf8') as gen:
         data = json.load(gen)
         buttons = [KeyboardButton(i_gen['name']) for i_gen in data]
         markup.add(buttons[0], buttons[1], buttons[2])

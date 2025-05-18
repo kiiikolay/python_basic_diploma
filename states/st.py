@@ -7,4 +7,5 @@ class UserInfoState(StatesGroup):
     search_by_budget = State()
     search_by_rating = State()
     search_by_name_upp_rat = State()
+    end_budget = State()
 
